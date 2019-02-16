@@ -49,14 +49,14 @@ Last Update: Jan 13, 2018
 --------------------------------------------- */
 /* Import Fonts & All CSS */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Oswald:200,300,400,500,600,700");
-@import url(../../home/static/css/bootstrap.min.css);
-@import url(../../home/static/css/animate.css);
-@import url(../../home/static/css/default-assets/classy-nav.css);
-@import url(../../home/static/css/default-assets/audioplayer.css);
-@import url(../../home/static/css/owl.carousel.min.css);
-@import url(../../home/static/css/magnific-popup.css);
-@import url(../../home/static/css/font-awesome.min.css);
-@import url(../../home/static/css/style.css);
+@import url(css/bootstrap.min.css);
+@import url(css/animate.css);
+@import url(css/default-assets/classy-nav.css);
+@import url(css/default-assets/audioplayer.css);
+@import url(css/owl.carousel.min.css);
+@import url(css/magnific-popup.css);
+@import url(css/font-awesome.min.css);
+@import url(css/style.css);
 /* :: 1.0 Reboot CSS */
 * {
   margin: 0;

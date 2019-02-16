@@ -17,8 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 #include를 통하여 다른 app의 경로를 연결을 하였다.
 
-from home import urls as home
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls')),
+    path('home/', include('home.urls')),
 ]
