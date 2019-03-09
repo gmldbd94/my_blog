@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from phonenumber_field.modelfields import PhoneNumberField
 
 #enum하고 비슷한 역할
 from django.utils.translation import ugettext as _
@@ -84,6 +85,13 @@ class Schedule(models.Model):
 
 class Lecture(Note):
     schedule_id = models.ForeignKey(Schedule, on_delete=models.PROTECT)
+
+class mentor(models.Model):
+    name = models.CharField(max_length=50)
+    phone = PhoneNumberField()
+    content = models.TextField(blank=True)
+    email = models.EmailField(blank=True, null=True)
+
 
 
 

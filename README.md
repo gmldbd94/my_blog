@@ -54,11 +54,36 @@
 ## 필요한 View 페이지
 1. main 페이지들
     - HOME
+         - 최근에 올린
+         - 진행중인 프로젝트
+         - Youtube
+         - schedule 목록들
+    - Project
+         - 진행중인 프로젝트
+         - 완료된 프로젝트
+         - 예정된 프로젝트
     - EDUCATION
+         - 교육 방식 및 커리큘럼
+         - 멘토 신청하기
     - STUDY
-    - CONTACT
+         - Note 모두 보기
+         - 글 자세히 보기
+            - form
+            - 댓글
+            - 좋아요 버튼
+         - 글 수정하기
+         - 글 삭제하기
+         
+         - category(강의, 개인 정리) 별로 게시판 보기
+         - tag 별로 게시판 보기
     - ABOUT
+        - 딱히 미정 준비중
     - QNA
+        - 질문 게시판(모든글 보기)
+        - 질문 자세히 보기 및 자세히 보기
+    
+    - 로그인 및 회원가입
+        
     
 2. from
     - 게시글
@@ -66,8 +91,41 @@
     - 로그인
     - 회원가입
     
+## frame work API
+~~~
+pip install djangorestframework
+pip install markdown       # Markdown support for the browsable API.
+pip install django-filter  # Filtering support
+~~~
+기본 설정(setting.py) 
+~~~
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
+~~~
+
+## phone_nuber_field
+~~~
+pip install django-phonenumber-field
+pip install phonenumbers
+
+INSTALLED_APPS = [
+    ...
+    'phonenumber_field',
+    ...
+]
+~~~
 ## 일지
 3.8 모델링 하다가 그만함
 
 3.9 pipenv 환경에서 다시 세팅하기로 했다.
     모델링 완성!
+    다음부터 gitignore 부터 세팅해주자
+    페이지 계획해함
+    form.py
+    실수로 빼먹은 멘토 시청 model 추가하였음
+    
